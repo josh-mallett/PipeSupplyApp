@@ -1,0 +1,43 @@
+.login-modal
+  width: 370px
+  height: 285px
+  position: relative
+  background: rgb(245, 245, 245)
+  font-family: 'Mukta Malar', sans-serif
+  font-size: 23px
+  color: rgb(40, 40, 40)
+  animation: slide-in-left .3s ease forwards
+  -webkit-box-shadow: 0px 13px 41px -15px rgba(0,0,0,0.75)
+  -moz-box-shadow: 0px 13px 41px -15px rgba(0,0,0,0.75)
+  box-shadow: 0px 13px 41px -15px rgba(0,0,0,0.75)
+  
+  h3 
+    max-width: 80%
+    margin: 0 auto
+    padding: 7px 7px 7px 18px
+    border-bottom: solid rgb(255, 102, 79) 2px
+
+  .login-inputs
+    width: 200px
+    margin: 20px auto
+    overflow: hidden 
+
+    li 
+      list-style: none
+      margin: 5px auto
+
+      input 
+        width: 100%
+        padding: 7px 0px 7px 7px
+        border: none
+        background: none
+        outline: none
+        border-bottom: solid rgb(70, 70, 70) 2px
+        font-weight: bold
+        transition: all .30s ease-in-out
+        &:focus
+          border-bottom: solid rgb(255, 102, 79) 2px
+          color: rgb(255, 102, 79)
+
+
+@import '../animations'
