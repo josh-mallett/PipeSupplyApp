@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MainLoginComponent } from './main-login/main-login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import { LoginService } from './login-service/login.service';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainLoginComponent }, 
@@ -35,9 +36,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
-    FormsModule
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

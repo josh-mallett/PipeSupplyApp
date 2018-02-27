@@ -1,14 +1,14 @@
 <div class="login-modal">
   <h3>{{ loginType + ' ' }}Login</h3>
   <div class="login-inputs">
-    <form #login="ngForm" (ngSubmit)="onSubmit(login)">
-        <li>
-          <input #username type="text" placeholder="Username">
-        </li>
-        <li>
-          <input #password type="password" placeholder="Password">
-        </li>
-        <button>LOGIN</button>
-  </form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <li>
+        <input formControlName="username" type="text" placeholder="Username">
+      </li>
+      <li>
+        <input formControlName="password" type="password" placeholder="Password">
+      </li>
+      <button>LOGIN</button>
+    </form>
   </div>
 </div>
