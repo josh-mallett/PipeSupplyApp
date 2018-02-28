@@ -8,6 +8,8 @@ import { MainLoginComponent } from './main-login/main-login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login-service/login.service';
+import { HeaderBarComponent } from './header-bar/header-bar.component';
+import { CustomerModule } from './customer/customer.module';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainLoginComponent }, 
@@ -29,14 +31,16 @@ const appRoutes: Routes = [
     AppComponent,
     MainLoginComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderBarComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes
     ),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CustomerModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
