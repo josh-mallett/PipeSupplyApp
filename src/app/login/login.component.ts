@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private _LoginService: LoginService) { }
 
   ngOnInit() {
-    this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
+      this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
       let type = params.get('type');
       if (type != null && type != undefined && type != '') {
         if (type == 'customer' || type == 'employee') {
